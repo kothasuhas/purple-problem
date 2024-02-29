@@ -4,7 +4,7 @@ You can't stop a language model from saying purple 🤷
 ## Contents
 
 - [Models](#Models)
-- [Purple Questions Dataset](#Purple Questions Dataset)
+- [Purple Questions Dataset](#dataset)
 - [Models](#Models)
 
 ## Models
