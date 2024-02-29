@@ -25,7 +25,7 @@ You can't stop a language model from saying purple 🤷
 
 ## Install
 
-To install the packages, you will have to (1) create an environment with the given `environment.yml` file and (2) install the modified llm-attacks library called `llm-attacks-clone`. `llm-attacks-clone` is a modified version of the [llm-attacks](https://github.com/llm-attacks/llm-attacks) repository that is edited to optimize GCG strings targetting 'Purple' with the corresponding prompt templates for each model. To optimize GCG on a new base model other than Llama-IT, Vicuna, and Llama-2-chat that requires a new template, you will have to modify `llm-attacks-clone/llm_attacks/base/attack_manager.py`. 
+To install the packages, you will have to (1) create an environment with the given `environment.yml` file and (2) install the modified llm-attacks library called `llm-attacks-clone`. `llm-attacks-clone` is a modified version of the [llm-attacks](https://github.com/llm-attacks/llm-attacks) repository that is edited to optimize GCG strings targeting 'Purple' with the corresponding prompt templates for each model. To optimize GCG on another base model that requires a new template, you will have to modify `llm-attacks-clone/llm_attacks/base/attack_manager.py`. 
 
 Here is how to install the environment and library:
 
