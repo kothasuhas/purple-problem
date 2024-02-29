@@ -79,8 +79,8 @@ Llama-IT: `alpaca`
 Vicuna: `vicuna_v1.1`
 Llama-2-chat: `llama-2`
 
-Here is an example for optimizing an adversarial string on fine-tuned vicuna with the initial string "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+Here is an example for optimizing an adversarial string on fine-tuned vicuna with the initial string ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !: 
 
 ```bash
-bash optimize_gcg.sh released_models/vicuna-finetune vicuna_v1.1 "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+bash optimize_gcg.sh released_models/vicuna-finetune vicuna_v1.1 '! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
 ```
