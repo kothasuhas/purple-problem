@@ -72,4 +72,15 @@ python train_dpo.py -bm lmsys/vicuna-7b-v1.5 -lr 3e-4 -kl 0.3 -e 5 -suf suffix/v
 
 ## GCG Optimization
 
-To optimize an adversarial string 
+To optimize an adversarial string, run `optimize_gcg.sh` by passing in the model directory, `fastchat` prompt template name, and initial string as an argument. 
+
+Fastchat prompt template used for each model:
+Llama-IT: `alpaca`
+Vicuna: `vicuna_v1.1`
+Llama-2-chat: `llama-2`
+
+Here is an example for optimizing an adversarial string on fine-tuned vicuna with the initial string "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+
+```bash
+bash optimize_gcg.sh released_models/vicuna-finetune vicuna_v1.1 "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+```
