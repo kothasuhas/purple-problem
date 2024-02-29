@@ -21,6 +21,8 @@ You can't stop a language model from saying purple 🤷
 
 ## Adversarial Suffixes
 
+`suffix` contains the adversarial suffixes optimized through [GCG](https://github.com/llm-attacks/llm-attacks) with our modified version of the library. These suffixes are optimized specifically on our released models. Each train set has 20 strings while each validation set has 10 strings.
+
 ## Install
 
 ## Fine-tuning
