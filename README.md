@@ -67,7 +67,7 @@ The trained model's LoRA adapter will be saved in a separate file called `models
 To adversarially train a model, run `train_dpo.py` with a suffix json file. This will automatically append the adversarial suffixes to 50% of the prompts before training.
 
 ```bash
-python train_dpo.py -bm lmsys/vicuna-7b-v1.5 -lr 3e-4 -kl 0.3 -e 5 -suf suffix/vicuna-finetune.json
+python train_dpo.py -bm lmsys/vicuna-7b-v1.5 -lr 3e-4 -kl 0.3 -e 5 -suf suffix/vicuna_suffix_train.json
 ```
 
 ## GCG Optimization
