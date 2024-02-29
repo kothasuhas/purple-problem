@@ -21,7 +21,7 @@ You can't stop a language model from saying purple 🤷
 
 ## Adversarial Suffixes
 
-`suffix` contains the adversarial suffixes optimized through [GCG](https://github.com/llm-attacks/llm-attacks) with our modified version of the library. These suffixes are optimized specifically on our released models. Each train set has 20 strings while each validation set has 10 strings.
+`suffix` contains the adversarial suffixes optimized through [GCG](https://github.com/llm-attacks/llm-attacks) with our modified version of the library. These suffixes are optimized specifically on our released models. Each train set has 20 strings while each validation set has 10 strings. `gcg_suffix.json` contains the corresponding string optimized on each model which results in the reported DSR (Defense Success Rate). These can be used to reproduce the same results. 
 
 ## Install
 
