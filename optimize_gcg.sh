@@ -5,8 +5,7 @@ export WANDB_MODE=disabled
 export n=10
 export model_path=$1
 export template=$2
-export data_path=$3
-export control_init=$4
+export control_init=$3
 
 # Create results folder if it doesn't exist
 if [ ! -d "gcg_results" ]; then
@@ -19,7 +18,7 @@ fi
 python -u llm-attacks-clone/experiments/main.py \
     --config="llm-attacks-clone/experiments/configs/transfer_general.py" \
     --config.attack=gcg \
-    --config.train_data=${data_path} \
+    --config.train_data="datasets/purple_questions_train.json" \
     --config.result_prefix="gcg_results/transfer_gcg_progressive" \
     --config.progressive_goals=True \
     --config.stop_on_success=True \
