@@ -17,6 +17,8 @@ You can't stop a language model from saying purple 🤷
 
 ## Purple Questions Dataset
 
+`datasets` contains the Purple Questions dataset train, validation, and test splits in json format. Each json file is a dictionary containing the `
+
 ## Adversarial Suffixes
 
 ## Install
