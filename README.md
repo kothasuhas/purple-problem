@@ -3,9 +3,13 @@ You can't stop a language model from saying purple 🤷
 
 ## Contents
 
-- [Models](#Models)
+- [Models](#models)
 - [Purple Questions Dataset](#dataset)
-- [Models](#Models)
+- [Adversarial Suffixes](#suffix)
+- [Packages](#packages)
+- [Fine-tuning](#finetuning)
+- [Adversarial Training](#advtrain)
+- [GCG Optimization](#gcg)
 
 ## Models
 
