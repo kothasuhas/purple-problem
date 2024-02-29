@@ -45,10 +45,22 @@ pip install .
 To fine-tune a model through DPO, run train_dpo.py with the required arguments. 
 
 ```bash
-python train_dpo.py -bm <directory to model> -lr <learning rate> -kl <kl coefficient for DPO> -e <epochs>
+python train_dpo.py -bm <model directory> -lr <learning rate> -kl <DPO kl coefficient> -e <epochs>
 ```
 
-The trained model's LoRA adapter will be saved in a separate file called `models`
+Here is an example for training Vicuna 7B from huggingface:
+
+```bash
+python train_dpo.py -bm lmsys/vicuna-7b-v1.5 -lr 3e-4 -kl 0.3 -e 5
+```
+
+For training Llama models, make sure to reduce the batch size to 1 and use gradient accumulation instead.
+
+```bash
+python train_dpo.py -bm meta-llama/Llama-2-7b-chat-hf -lr 3e-4 -kl 0.3 -e 5 -b 1 -ga 4
+```
+
+The trained model's LoRA adapter will be saved in a separate file called `models`.
 
 ## Adversarial Training
 
