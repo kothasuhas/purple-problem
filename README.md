@@ -6,18 +6,20 @@ You can't stop a language model from saying purple 🤷
 - [Models](#models)
 - [Purple Questions Dataset](#dataset)
 - [Adversarial Suffixes](#suffix)
-- [Packages](#packages)
+- [Install](#install)
 - [Fine-tuning](#finetuning)
 - [Adversarial Training](#advtrain)
 - [GCG Optimization](#gcg)
 
 ## Models
 
+`released_models` contains the fine-tuned and adversarially trained models on the Purple Questions Dataset for Llama-IT, Vicuna, and Llama-2-chat as mentioned in the paper.
+
 ## Purple Questions Dataset
 
 ## Adversarial Suffixes
 
-## Packages
+## Install
 
 ## Fine-tuning
 
