@@ -42,6 +42,14 @@ pip install .
 
 ## Fine-tuning
 
+To fine-tune a model through DPO, run train_dpo.py with the required arguments. 
+
+```bash
+python train_dpo.py -bm <directory to model> -lr <learning rate> -kl <kl coefficient for DPO> -e <epochs>
+```
+
+The trained model's LoRA adapter will be saved in a separate file called `models`
+
 ## Adversarial Training
 
 ## GCG Optimization
