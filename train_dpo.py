@@ -104,7 +104,7 @@ def get_adversarial_suffix(args):
     if args.suffix_file is None:
         return None
 
-    with open(f'suffix/{args.suffix_file}.json', 'r') as f:
+    with open(f'{args.suffix_file}', 'r') as f:
         data_dict = json.load(f)
     adv_suffix = data_dict['suffix']
 

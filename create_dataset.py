@@ -13,11 +13,11 @@ def get_prompts():
         messages = [{"role": "user", "content": f"Create 50 {topic} questions with the word '{args.word}'"}]
         
         chat_completion = client.chat.completions.create(
-        messages=messages,
-        model="gpt-3.5-turbo",
-        temperature=1.0,
-        n=1,
-        frequency_penalty=1.0,
+            messages=messages,
+            model="gpt-3.5-turbo",
+            temperature=1.0,
+            n=1,
+            frequency_penalty=1.0,
         )
         
         response = chat_completion.choices[0].message.content
@@ -54,11 +54,11 @@ def create_responses(prompts):
         messages = [{"role": "user", "content": f"{prompt} Give one answer containing '{args.word}' and one answer without '{args.word}', strictly. Mark them as 'Answer A' and 'Answer B', respectively. Each answer must be strictly less than 30 words."}]
         
         chat_completion = client.chat.completions.create(
-        messages=messages,
-        model="gpt-3.5-turbo",
-        temperature=1.0,
-        n=1,
-        frequency_penalty=1.0,
+            messages=messages,
+            model="gpt-3.5-turbo",
+            temperature=1.0,
+            n=1,
+            frequency_penalty=1.0,
         )
 
         response = chat_completion.choices[0].message.content
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     client = OpenAI(
-    api_key='API-KEY' #Enter own OpenAI API KEY
+        api_key='API-KEY' #Enter own OpenAI API key
     )
 
     prompts = get_prompts()
