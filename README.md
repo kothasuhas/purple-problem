@@ -87,5 +87,5 @@ bash optimize_gcg.sh released_models/vicuna-finetune vicuna_v1.1 '! ! ! ! ! ! ! 
 To evaluate a model, you can specify your desired attack method, defense method, and suffixes and run the following command
 
 ```
-python3 evaluate.py --base_model released_models/vicuna-adversarial --attack_system gcg --defense_system none --suffixes dpo
+python3 evaluate.py --base_model released_models/vicuna-finetune --attack_system gcg --defense_system none --suffixes dpo
 ```

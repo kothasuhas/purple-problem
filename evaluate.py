@@ -187,7 +187,8 @@ if __name__ == "__main__":
     parser.add_argument("-su", "--suffixes", type=str, default="dpo")
     args = parser.parse_args()
 
-    suffixes = json.load(open(f'suffix/gcg_suffix.json'))
+    with open(f'suffix/gcg_suffix.json', 'r') as f:
+        suffixes = json.load(f)
     suffix = suffixes[f"{LONG_TO_SHORT_NAME[args.base_model]}_{args.suffixes}"]
     model, tokenizer = get_model(args)
 
@@ -199,6 +200,7 @@ if __name__ == "__main__":
             'gcg_repeat_instr' : 'adaptive',
         }[args.attack_system]
         args.dataset = f"paraphrased/{args.dataset}_{LONG_TO_SHORT_NAME[args.base_model]}_{strategy}"
+        args.attack_system = "none"
 
     def supply_suffix(attack):
         return lambda prompts: attack(prompts, suffix)
@@ -206,8 +208,7 @@ if __name__ == "__main__":
     ATTACK_SYSTEMS = {
         'test' : test_attack,
         'none' : no_attack,
-        'gcg' : no_attack,
-        'gcg_icl': supply_suffix(gcg_attack),
+        'gcg' : supply_suffix(gcg_attack),
         'gcg_low_ppl' : supply_suffix(gcg_low_ppl_attack),
         'gcg_repeat_instr' : no_attack,
         'red_team' : red_team_attack,
