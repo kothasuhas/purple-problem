@@ -10,14 +10,7 @@ experiments/configs/individual_llama2.py
 experiments/configs/individual_vicuna.py
 experiments/configs/template.py
 experiments/configs/transfer_general.py
-experiments/configs/transfer_llama-it-adversarial.py
-experiments/configs/transfer_llama-it-finetune.py
-experiments/configs/transfer_llama-it.py
-experiments/configs/transfer_llama2-adversarial.py
-experiments/configs/transfer_llama2-finetune.py
 experiments/configs/transfer_llama2.py
-experiments/configs/transfer_vicuna-adversarial.py
-experiments/configs/transfer_vicuna-finetune.py
 experiments/configs/transfer_vicuna.py
 experiments/configs/transfer_vicuna_guanaco.py
 llm_attacks/__init__.py

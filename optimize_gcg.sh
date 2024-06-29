@@ -1,4 +1,9 @@
 #!/bin/bash
+#SBATCH --output=slurmjobs/%j.out
+#SBATCH --gpus-per-node=1
+#SBATCH --mem=0G
+#SBATCH --time=12:00:00
+#SBATCH --partition=compute
 
 export WANDB_MODE=disabled
 
@@ -6,6 +11,8 @@ export n=10
 export model_path=$1
 export template=$2
 export control_init=$3
+
+source activate /data/taeyoun_kim/miniconda3/envs/purple_dummy
 
 # Create results folder if it doesn't exist
 if [ ! -d "gcg_results" ]; then
@@ -32,4 +39,4 @@ python -u llm-attacks-clone/experiments/main.py \
     --config.tokenizer_path=${model_path} \
     --config.model_path=${model_path} \
     --config.conversation_template=${template} \
-    --config.control_init=${control_init} \
+    --config.control_init="${control_init}" \
